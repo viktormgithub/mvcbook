@@ -28,7 +28,7 @@ ISBN13 VARCHAR(13),
 Content XML
 )
 
-###Результат:
+### Результат:
 dbo.Books в BOOKBASE
 
 ---
@@ -48,7 +48,7 @@ VALUES ('Title 3', 'Autor 3', 1963, 'USA', 'Amazing book 3', '1234567892', '1234
 
 Создание хранимых процедур
 
-###Хранимая процедура для SELECT:
+### Хранимая процедура для SELECT:
 
 USE BOOKBASE;<br>
 GO<br>
@@ -72,7 +72,7 @@ WHERE id = @id<br>
 END;<br>
 
 
-###Хранимая процедура для Insert:
+### Хранимая процедура для Insert:
 
 USE BOOKBASE;<br>
 GO<br>
@@ -92,7 +92,7 @@ VALUES(@title, @author, @year, @publisher, @annotation, @isbn10, @isbn13, @conte
 END;<br>
 
 
-###Хранимая процедура для Update:
+### Хранимая процедура для Update:
 
 USE BOOKBASE;<br>
 GO<br>
@@ -114,7 +114,7 @@ WHERE id = @id;<br>
 END;<br>
 
 
-###Хранимая процедура для Delete:
+### Хранимая процедура для Delete:
 
 USE BOOKBASE;<br>
 GO<br>
