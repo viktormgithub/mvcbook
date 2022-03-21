@@ -1,0 +1,14 @@
+﻿@model BookMVC.Models.Book
+
+@{
+    ViewData["Title"] = "Update book";
+
+    <form method="post" action="/Update">
+        @Html.EditorForModel()
+        <br/>
+        <br/>
+        <p>
+            <input type="submit" value="Save"/>
+        </p>
+    </form>
+}

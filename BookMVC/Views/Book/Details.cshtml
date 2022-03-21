@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Details Page";
+}
+
+<div class="text-center">
+    <div>
+        @if (Model is not null)
+        {
+            <p>Id: @Model.Id</p>
+            <p>Author: @Model.Author</p>
+            <p>Title: @Model.Title</p>
+            <p>Year: @Model.Year</p>
+            <p>Publisher: @Model.Publisher</p>
+            <p>Annotation: @Model.Annotation</p>
+            <p>ISBN10: @Model.ISBN10</p>
+            <p>ISBN13: @Model.ISBN13</p>
+            <p>Содержиние: @Model.Content</p>
+            <br/>
+            <br/>
+            
+            @Html.ActionLink("Edit", "Update", "Book", new { id = Model.Id });
+            
+            @using (Html.BeginForm("Delete", "Book", new { id = Model.Id }, FormMethod.Post))
+                {
+                    <p>
+                        <input type="submit" value="Delete"/>
+                    </p>
+                }
+        }
+        else
+        {
+            <p>Книга с запрошенным id не найдена</p>
+        }
+    </div>
+</div>

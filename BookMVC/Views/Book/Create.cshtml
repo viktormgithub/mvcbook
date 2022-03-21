@@ -1,0 +1,15 @@
+﻿@model BookMVC.Models.Book
+
+@{
+    ViewData["Title"] = "Create new book";
+
+    @using (Html.BeginForm("Create", "Book", FormMethod.Post))
+    {
+        @Html.EditorForModel()
+        <br/>
+        <br/>
+        <p>
+            <input type="submit" value="Create"/>
+        </p>
+    }
+}

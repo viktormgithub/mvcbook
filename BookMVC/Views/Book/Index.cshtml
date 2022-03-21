@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @Model.Count</h1>
+    
+    <div>
+    @foreach (var book in Model)
+    {
+        <p>@book.Id. @book.Author - @book.Title, @book.Year, @book.Publisher @Html.ActionLink("Details", "Details", "Book", new { id = book.Id }, null)</p>
+    }
+    </div>
+    
+    <div>
+        @Html.ActionLink("Add new...", "Create", "Book", null, null)
+    </div>
+</div>
